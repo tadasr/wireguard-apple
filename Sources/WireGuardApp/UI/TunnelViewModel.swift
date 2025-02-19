@@ -3,6 +3,8 @@
 
 import Foundation
 
+import WireGuardKit
+
 class TunnelViewModel {
 
     enum InterfaceField: CaseIterable {

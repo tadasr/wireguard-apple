@@ -5,6 +5,8 @@ import Foundation
 import NetworkExtension
 import os
 
+import WireGuardKit
+
 class PacketTunnelProvider: NEPacketTunnelProvider {
 
     private lazy var adapter: WireGuardAdapter = {

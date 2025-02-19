@@ -1,10 +1,10 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: GPL-2.0
 #
 # Copyright (C) 2018-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
 
 # These are generally passed to us by xcode, but we set working defaults for standalone compilation too.
-ARCHS ?= x86_64 arm64
-PLATFORM_NAME ?= macosx
+ARCHS ?= arm64
+PLATFORM_NAME ?= iphoneos
 SDKROOT ?= $(shell xcrun --sdk $(PLATFORM_NAME) --show-sdk-path)
 CONFIGURATION_BUILD_DIR ?= $(CURDIR)/out
 CONFIGURATION_TEMP_DIR ?= $(CURDIR)/.tmp

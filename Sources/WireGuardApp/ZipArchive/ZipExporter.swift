@@ -3,6 +3,8 @@
 
 import Foundation
 
+import WireGuardKit
+
 enum ZipExporterError: WireGuardAppError {
     case noTunnelsToExport
 

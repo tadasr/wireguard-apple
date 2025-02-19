@@ -3,6 +3,10 @@
 
 import Foundation
 
+import WireGuardKit
+import WireGuardKitC
+import WireGuardKitGo
+
 extension TunnelConfiguration {
 
     enum ParserState {

@@ -3,6 +3,8 @@
 
 import UIKit
 
+import WireGuardKit
+
 protocol TunnelEditTableViewControllerDelegate: AnyObject {
     func tunnelSaved(tunnel: TunnelContainer)
     func tunnelEditingCancelled()

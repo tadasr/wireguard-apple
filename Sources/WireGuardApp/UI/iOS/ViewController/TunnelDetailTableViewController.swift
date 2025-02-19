@@ -3,6 +3,8 @@
 
 import UIKit
 
+import WireGuardKit
+
 class TunnelDetailTableViewController: UITableViewController {
 
     private enum Section {

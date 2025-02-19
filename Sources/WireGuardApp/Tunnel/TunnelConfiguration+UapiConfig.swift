@@ -3,6 +3,8 @@
 
 import Foundation
 
+import WireGuardKit
+
 extension TunnelConfiguration {
     convenience init(fromUapiConfig uapiConfig: String, basedOn base: TunnelConfiguration? = nil) throws {
         var interfaceConfiguration: InterfaceConfiguration?
