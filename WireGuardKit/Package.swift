@@ -6,7 +6,7 @@ let package = Package(
     name: "WireGuardKit",
     platforms: [
         .macOS(.v10_15),
-        .iOS(.v17)
+        .iOS(.v15)
     ],
     products: [
         .library(name: "WireGuardKit", targets: ["WireGuardKit"])
@@ -33,7 +33,10 @@ let package = Package(
                 "Makefile"
             ],
             publicHeadersPath: ".",
-            linkerSettings: [.linkedLibrary("wg-go")]
+            linkerSettings: [
+                .unsafeFlags(["-L", "./Libs"]),
+                .linkedLibrary("wg-go")
+            ]
         )
     ]
 )

@@ -80,9 +80,9 @@
 		6FFA5DA021958ECC0001E2F7 /* ErrorNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA5D9F21958ECC0001E2F7 /* ErrorNotifier.swift */; };
 		6FFA5DA42197085D0001E2F7 /* ActivateOnDemandOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA5DA32197085D0001E2F7 /* ActivateOnDemandOption.swift */; };
 		EEF4D08C2D65D4D60000B0A8 /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF4D08B2D65D4D60000B0A8 /* WireGuardKit */; };
-		EEF4D08F2D65D5280000B0A8 /* libwg-go.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF4D08E2D65D5150000B0A8 /* libwg-go.a */; };
 		EEF4D0912D65D5910000B0A8 /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF4D0902D65D5910000B0A8 /* WireGuardKit */; };
-		EEF4D0922D65D7860000B0A8 /* libwg-go.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF4D08E2D65D5150000B0A8 /* libwg-go.a */; };
+		EEF790AB2D6F0393007D66BC /* libwg-go.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF790AA2D6F0393007D66BC /* libwg-go.a */; };
+		EEF790AC2D6F0396007D66BC /* libwg-go.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF790AA2D6F0393007D66BC /* libwg-go.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,7 +227,7 @@
 		6FFA5D9F21958ECC0001E2F7 /* ErrorNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorNotifier.swift; sourceTree = "<group>"; };
 		6FFA5DA32197085D0001E2F7 /* ActivateOnDemandOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateOnDemandOption.swift; sourceTree = "<group>"; };
 		6FFACD1E21E4D89600E9A2A5 /* ParseError+WireGuardAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParseError+WireGuardAppError.swift"; sourceTree = "<group>"; };
-		EEF4D08E2D65D5150000B0A8 /* libwg-go.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libwg-go.a"; path = "WireGuardKit/Sources/WireGuardKitGo/libwg-go.a"; sourceTree = "<group>"; };
+		EEF790AA2D6F0393007D66BC /* libwg-go.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libwg-go.a"; path = "WireGuardKit/Libs/libwg-go.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,7 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF4D08C2D65D4D60000B0A8 /* WireGuardKit in Frameworks */,
-				EEF4D08F2D65D5280000B0A8 /* libwg-go.a in Frameworks */,
+				EEF790AC2D6F0396007D66BC /* libwg-go.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF4D0912D65D5910000B0A8 /* WireGuardKit in Frameworks */,
-				EEF4D0922D65D7860000B0A8 /* libwg-go.a in Frameworks */,
+				EEF790AB2D6F0393007D66BC /* libwg-go.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,8 +540,8 @@
 		6FF4AC452120B9E0002C96EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EEF4D08E2D65D5150000B0A8 /* libwg-go.a */,
 				6FB1BDB621D4F8B800A991BF /* NetworkExtension.framework */,
+				EEF790AA2D6F0393007D66BC /* libwg-go.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -835,6 +835,8 @@
 					"$(PROJECT_DIR)/Sources/WireGuardKitGo/.tmp/wireguard-go-bridge/goroot/src/go/internal/gccgoimporter/testdata",
 					"$(PROJECT_DIR)/Sources/WireGuardKitGo/.tmp/wireguard-go-bridge",
 					"$(PROJECT_DIR)/WireGuardKit/Sources/WireGuardKitGo",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WireGuardKit/Libs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_IOS).network-extension";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.cujo.demosdk.packettunnel;
@@ -873,6 +875,8 @@
 					"$(PROJECT_DIR)/Sources/WireGuardKitGo/.tmp/wireguard-go-bridge/goroot/src/go/internal/gccgoimporter/testdata",
 					"$(PROJECT_DIR)/Sources/WireGuardKitGo/.tmp/wireguard-go-bridge",
 					"$(PROJECT_DIR)/WireGuardKit/Sources/WireGuardKitGo",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WireGuardKit/Libs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_IOS).network-extension";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.cujo.demosdk.packettunnel;
@@ -1033,6 +1037,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WireGuardKit/Sources/WireGuardKitGo",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WireGuardKit/Libs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_IOS)";
 				PRODUCT_NAME = WireGuard;
@@ -1065,6 +1071,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WireGuardKit/Sources/WireGuardKitGo",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WireGuardKit/Libs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID_IOS)";
 				PRODUCT_NAME = WireGuard;

@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT
-// Copyright © 2018-2021 WireGuard LLC. All Rights Reserved.
+// Copyright © 2018-2023 WireGuard LLC. All Rights Reserved.
 
 import Foundation
-import DarwinFoundation
 import NetworkExtension
 
 #if SWIFT_PACKAGE
