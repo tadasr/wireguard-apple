@@ -80,9 +80,11 @@
 		6FFA5DA021958ECC0001E2F7 /* ErrorNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA5D9F21958ECC0001E2F7 /* ErrorNotifier.swift */; };
 		6FFA5DA42197085D0001E2F7 /* ActivateOnDemandOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA5DA32197085D0001E2F7 /* ActivateOnDemandOption.swift */; };
 		EEF4D08C2D65D4D60000B0A8 /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF4D08B2D65D4D60000B0A8 /* WireGuardKit */; };
-		EEF4D0912D65D5910000B0A8 /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF4D0902D65D5910000B0A8 /* WireGuardKit */; };
 		EEF790AB2D6F0393007D66BC /* libwg-go.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF790AA2D6F0393007D66BC /* libwg-go.a */; };
 		EEF790AC2D6F0396007D66BC /* libwg-go.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF790AA2D6F0393007D66BC /* libwg-go.a */; };
+		EEF790AF2D6F05D3007D66BC /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF790AE2D6F05D3007D66BC /* WireGuardKit */; };
+		EEF790B22D6F06AC007D66BC /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF790B12D6F06AC007D66BC /* WireGuardKit */; };
+		EEF790B42D6F0701007D66BC /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF790B32D6F0701007D66BC /* WireGuardKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +239,8 @@
 			files = (
 				EEF4D08C2D65D4D60000B0A8 /* WireGuardKit in Frameworks */,
 				EEF790AC2D6F0396007D66BC /* libwg-go.a in Frameworks */,
+				EEF790B22D6F06AC007D66BC /* WireGuardKit in Frameworks */,
+				EEF790AF2D6F05D3007D66BC /* WireGuardKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF4D0912D65D5910000B0A8 /* WireGuardKit in Frameworks */,
+				EEF790B42D6F0701007D66BC /* WireGuardKit in Frameworks */,
 				EEF790AB2D6F0393007D66BC /* libwg-go.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +568,8 @@
 			name = WireGuardNetworkExtensioniOS;
 			packageProductDependencies = (
 				EEF4D08B2D65D4D60000B0A8 /* WireGuardKit */,
+				EEF790AE2D6F05D3007D66BC /* WireGuardKit */,
+				EEF790B12D6F06AC007D66BC /* WireGuardKit */,
 			);
 			productName = WireGuardNetworkExtension;
 			productReference = 6F5D0C1A218352EF000F85AD /* WireGuardNetworkExtension.appex */;
@@ -586,7 +592,7 @@
 			);
 			name = WireGuardiOS;
 			packageProductDependencies = (
-				EEF4D0902D65D5910000B0A8 /* WireGuardKit */,
+				EEF790B32D6F0701007D66BC /* WireGuardKit */,
 			);
 			productName = WireGuard;
 			productReference = 6FF4AC14211EC46F002C96EB /* WireGuard.app */;
@@ -634,7 +640,7 @@
 			);
 			mainGroup = 6FF4AC0B211EC46F002C96EB;
 			packageReferences = (
-				EEF4D08A2D65D4D60000B0A8 /* XCLocalSwiftPackageReference "WireGuardKit" */,
+				EEF790B02D6F06AC007D66BC /* XCLocalSwiftPackageReference "../../wireguard-apple" */,
 			);
 			productRefGroup = 6FF4AC15211EC46F002C96EB /* Products */;
 			projectDirPath = "";
@@ -1120,9 +1126,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		EEF4D08A2D65D4D60000B0A8 /* XCLocalSwiftPackageReference "WireGuardKit" */ = {
+		EEF790B02D6F06AC007D66BC /* XCLocalSwiftPackageReference "../../wireguard-apple" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = WireGuardKit;
+			relativePath = "../../wireguard-apple";
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -1131,9 +1137,17 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WireGuardKit;
 		};
-		EEF4D0902D65D5910000B0A8 /* WireGuardKit */ = {
+		EEF790AE2D6F05D3007D66BC /* WireGuardKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EEF4D08A2D65D4D60000B0A8 /* XCLocalSwiftPackageReference "WireGuardKit" */;
+			productName = WireGuardKit;
+		};
+		EEF790B12D6F06AC007D66BC /* WireGuardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WireGuardKit;
+		};
+		EEF790B32D6F0701007D66BC /* WireGuardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEF790B02D6F06AC007D66BC /* XCLocalSwiftPackageReference "../../wireguard-apple" */;
 			productName = WireGuardKit;
 		};
 /* End XCSwiftPackageProductDependency section */
