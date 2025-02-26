@@ -32,7 +32,11 @@ let package = Package(
                 "api-apple.go",
                 "Makefile"
             ],
-            publicHeadersPath: "."
+            publicHeadersPath: ".",
+            linkerSettings: [
+                .unsafeFlags(["-L", "Libs"]),
+                .linkedLibrary("wg-go")
+            ]
         )
     ]
 )
