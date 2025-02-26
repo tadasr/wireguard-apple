@@ -80,8 +80,6 @@
 		6FFA5DA021958ECC0001E2F7 /* ErrorNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA5D9F21958ECC0001E2F7 /* ErrorNotifier.swift */; };
 		6FFA5DA42197085D0001E2F7 /* ActivateOnDemandOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFA5DA32197085D0001E2F7 /* ActivateOnDemandOption.swift */; };
 		EEF4D08C2D65D4D60000B0A8 /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF4D08B2D65D4D60000B0A8 /* WireGuardKit */; };
-		EEF790AB2D6F0393007D66BC /* libwg-go.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF790AA2D6F0393007D66BC /* libwg-go.a */; };
-		EEF790AC2D6F0396007D66BC /* libwg-go.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF790AA2D6F0393007D66BC /* libwg-go.a */; };
 		EEF790AF2D6F05D3007D66BC /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF790AE2D6F05D3007D66BC /* WireGuardKit */; };
 		EEF790B22D6F06AC007D66BC /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF790B12D6F06AC007D66BC /* WireGuardKit */; };
 		EEF790B42D6F0701007D66BC /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = EEF790B32D6F0701007D66BC /* WireGuardKit */; };
@@ -229,7 +227,6 @@
 		6FFA5D9F21958ECC0001E2F7 /* ErrorNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorNotifier.swift; sourceTree = "<group>"; };
 		6FFA5DA32197085D0001E2F7 /* ActivateOnDemandOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateOnDemandOption.swift; sourceTree = "<group>"; };
 		6FFACD1E21E4D89600E9A2A5 /* ParseError+WireGuardAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParseError+WireGuardAppError.swift"; sourceTree = "<group>"; };
-		EEF790AA2D6F0393007D66BC /* libwg-go.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libwg-go.a"; path = "WireGuardKit/Libs/libwg-go.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +235,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF4D08C2D65D4D60000B0A8 /* WireGuardKit in Frameworks */,
-				EEF790AC2D6F0396007D66BC /* libwg-go.a in Frameworks */,
 				EEF790B22D6F06AC007D66BC /* WireGuardKit in Frameworks */,
 				EEF790AF2D6F05D3007D66BC /* WireGuardKit in Frameworks */,
 			);
@@ -249,7 +245,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF790B42D6F0701007D66BC /* WireGuardKit in Frameworks */,
-				EEF790AB2D6F0393007D66BC /* libwg-go.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,7 +540,6 @@
 			isa = PBXGroup;
 			children = (
 				6FB1BDB621D4F8B800A991BF /* NetworkExtension.framework */,
-				EEF790AA2D6F0393007D66BC /* libwg-go.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

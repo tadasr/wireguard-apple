@@ -17,8 +17,8 @@ BUILDDIR ?= $(CONFIGURATION_TEMP_DIR)/wireguard-go-bridge
 
 CFLAGS_PREFIX := $(if $(DEPLOYMENT_TARGET_CLANG_FLAG_NAME),-$(DEPLOYMENT_TARGET_CLANG_FLAG_NAME)=$($(DEPLOYMENT_TARGET_CLANG_ENV_NAME)),) -isysroot $(SDKROOT) -arch
 GOARCH_arm64 := arm64
-GOARCH_x86_64 := amd64
-GOOS_macosx := darwin
+# GOARCH_x86_64 := amd64
+# GOOS_macosx := darwin
 GOOS_iphoneos := ios
 
 build: $(DESTDIR)/libwg-go.a
